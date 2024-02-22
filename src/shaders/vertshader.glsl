@@ -19,3 +19,4 @@ void main() {
   gl_Position = vec4(vertCoordinates_in, 1.0F);
   vertColor = vertColor_in;
 }
+

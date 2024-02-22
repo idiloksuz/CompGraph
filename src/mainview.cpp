@@ -34,6 +34,8 @@ MainView::~MainView() {
   qDebug() << "MainView destructor";
 
   makeCurrent();
+  glDeleteBuffers(1, &vbo); // Clean up VBO
+  glDeleteVertexArrays(1, &vao); // Clean up VAO
 }
 
 // --- OpenGL initialization
@@ -56,17 +58,33 @@ void MainView::initializeGL() {
 
   QString glVersion{reinterpret_cast<const char *>(glGetString(GL_VERSION))};
   qDebug() << ":: Using OpenGL" << qPrintable(glVersion);
+  Vertex vertices[18]; // 6 vertices for the pyramid
 
-  Vertex vertices[5];
+  // Define vertices of the pyramid
+  vertices[0] = {-1.0f, -1.0f, 1.0f, 0.0f, 0.0f, 1.0f}; // BLUE
+  vertices[1] = {1.0f, -1.0f, 1.0f, 1.0f, 1.0f, 0.0f};  // YELLOW
+  vertices[2] = {0.0f, 0.0f, -1.0f, 1.0f, 0.0f, 1.0f};  // PURPLE
 
-  // Bottom vertices
-  vertices[0] = {-1.0f, -1.0f, 1.0f, 1.0f, 0.0f, 0.0f}; // Bottom-left corner, red
-  vertices[1] = {1.0f, -1.0f, 1.0f, 0.0f, 1.0f, 0.0f};  // Bottom-right corner, green
-  vertices[2] = {1.0f, 1.0f, 1.0f, 0.0f, 0.0f, 1.0f};   // Top-right corner, blue
-  vertices[3] = {-1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 0.0f};  // Top-left corner, yellow
+  vertices[3] = {1.0f, -1.0f, 1.0f, 1.0f, 1.0f, 0.0f};  // YELLOW
+  vertices[4] = {1.0f, 1.0f, 1.0f, 0.0f, 1.0f, 0.0f};   // GREEN
+  vertices[5] = {0.0f, 0.0f, -1.0f, 1.0f, 0.0f, 1.0f};  // PURPLE
 
-  // Top vertex
-  vertices[4] = {0.0f, 0.0f, -1.0f, 1.0f, 0.0f, 1.0f};  // Top corner, purple
+  vertices[6] = {1.0f, 1.0f, 1.0f, 0.0f, 1.0f, 0.0f};   // GREEN
+  vertices[7] = {-1.0f, 1.0f, 1.0f, 1.0f, 0.0f, 0.0f};  // RED
+  vertices[8] = {0.0f, 0.0f, -1.0f, 1.0f, 0.0f, 1.0f};  // PURPLE
+
+  vertices[9] = {-1.0f, 1.0f, 1.0f, 1.0f, 0.0f, 0.0f};  // RED
+  vertices[10] = {-1.0f, -1.0f, 1.0f, 0.0f, 0.0f, 1.0f}; // BLUE
+  vertices[11] = {0.0f, 0.0f, -1.0f, 1.0f, 0.0f, 1.0f};  // PURPLE
+
+  vertices[12] = {-1.0f, -1.0f, 1.0f, 0.0f, 0.0f, 1.0f}; // BLUE
+  vertices[13] = {1.0f, -1.0f, 1.0f, 1.0f, 1.0f, 0.0f};  // YELLOW
+  vertices[14] = {-1.0f, 1.0f, 1.0f, 1.0f, 0.0f, 0.0f};  // RED
+
+  vertices[15] = {1.0f, -1.0f, 1.0f, 1.0f, 1.0f, 0.0f};  // YELLOW
+  vertices[16] = {1.0f, 1.0f, 1.0f, 0.0f, 1.0f, 0.0f};   // GREEN
+  vertices[17] = {-1.0f, 1.0f, 1.0f, 1.0f, 0.0f, 0.0f};  // RED
+
   glGenBuffers(1, &vbo);
   glGenVertexArrays(1, &vao);
 
@@ -84,29 +102,29 @@ void MainView::initializeGL() {
   glBindVertexArray(vao); // Bind the VAO
   glBindBuffer(GL_ARRAY_BUFFER, vbo); // Bind the VBO
   glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
+
+  // Specify vertex attribute pointers
+  glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), reinterpret_cast<void*>(offsetof(Vertex, x)));
+  glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), reinterpret_cast<void*>(offsetof(Vertex, red)));
   glEnableVertexAttribArray(0); // Vertex position
   glEnableVertexAttribArray(1); // Vertex color
 
-  // Specify vertex attribute pointers
-  glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, sizeof(Vertex), reinterpret_cast<void*>(offsetof(Vertex, x)));
-  glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), reinterpret_cast<void*>(offsetof(Vertex, red)));
 
   // Unbind VBO and VAO
   glBindBuffer(GL_ARRAY_BUFFER, 0);
   glBindVertexArray(0);
-  // Enable depth buffer
-  glEnable(GL_DEPTH_TEST);
+  // // Enable depth buffer
+  // glEnable(GL_DEPTH_TEST);
 
-  // Enable backface culling
-  glEnable(GL_CULL_FACE);
+  // // Enable backface culling
+  // glEnable(GL_CULL_FACE);
 
-  // Default is GL_LESS
-  glDepthFunc(GL_LEQUAL);
+  // // Default is GL_LESS
+  // glDepthFunc(GL_LEQUAL);
 
   // Set the color to be used by glClear. This is, effectively, the background
   // color.
-  glClearColor(0.37f, 0.42f, 0.45f, 0.0f);
-
+glClearColor(0.37f, 0.42f, 0.45f, 0.0f);
   createShaderProgram();
 }
 
@@ -140,7 +158,7 @@ void MainView::paintGL() {
   glBindVertexArray(vao);
 
   // Draw the triangle
-  glDrawArrays(GL_TRIANGLES, 0, 3);
+  glDrawArrays(GL_TRIANGLES, 0, 18);
 
   // Unbind the VAO
   glBindVertexArray(0);
@@ -155,8 +173,10 @@ void MainView::paintGL() {
  */
 void MainView::resizeGL(int newWidth, int newHeight) {
   // TODO: Update projection to fit the new aspect ratio
-  Q_UNUSED(newWidth)
-  Q_UNUSED(newHeight)
+  // Q_UNUSED(newWidth)
+  // Q_UNUSED(newHeight)
+  glViewport(0, 0, newWidth, newHeight);
+
 }
 
 /**
