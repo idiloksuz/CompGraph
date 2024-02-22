@@ -57,6 +57,12 @@ class MainView : public QOpenGLWidget, protected QOpenGLFunctions_3_3_Core {
   QTimer timer;  // timer used for animation
 
   QOpenGLShaderProgram shaderProgram;
+  protected:
+  // Other protected members...
+
+  QMatrix4x4 transformationModel;
+  QMatrix4x4 transformationProjection;
+
 
   void createShaderProgram();
 };

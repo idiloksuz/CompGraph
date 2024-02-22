@@ -69,3 +69,15 @@
 129	2916	1708616152290442460	CMakeFiles/OpenGL_1.dir/mainview.cpp.o	5f8a5106a1c0e89
 128	2974	1708616152349536510	CMakeFiles/OpenGL_1.dir/mainwindow.cpp.o	2acdd931ab66d2d2
 2974	3174	1708616152553150430	OpenGL_1.app/Contents/MacOS/OpenGL_1	d473c4c3c4ba6b6a
+17	438	1708617543873330000	OpenGL_1_autogen/timestamp	a1744f6206673fae
+17	438	1708617543873330000	OpenGL_1_autogen/mocs_compilation.cpp	a1744f6206673fae
+17	438	1708617543873330000	/Users/idiloksuz/Desktop/CompGraph/build-src-Replacement_for_Qt_6_6_1_for_macOS-Debug/OpenGL_1_autogen/timestamp	a1744f6206673fae
+17	438	1708617543873330000	/Users/idiloksuz/Desktop/CompGraph/build-src-Replacement_for_Qt_6_6_1_for_macOS-Debug/OpenGL_1_autogen/mocs_compilation.cpp	a1744f6206673fae
+438	558	1708617544016220031	OpenGL_1_autogen/EWIEGA46WW/qrc_resources.cpp	bf1b60fdb06d7dc2
+438	558	1708617544016220031	/Users/idiloksuz/Desktop/CompGraph/build-src-Replacement_for_Qt_6_6_1_for_macOS-Debug/OpenGL_1_autogen/EWIEGA46WW/qrc_resources.cpp	bf1b60fdb06d7dc2
+581	908	1708617544358100384	CMakeFiles/OpenGL_1.dir/OpenGL_1_autogen/EWIEGA46WW/qrc_resources.cpp.o	e3d7feb7af6c9baf
+581	3710	1708617547152592251	CMakeFiles/OpenGL_1.dir/userinput.cpp.o	63c66d68f7013c94
+580	3767	1708617547210674314	CMakeFiles/OpenGL_1.dir/OpenGL_1_autogen/mocs_compilation.cpp.o	2e097b5eb6397472
+580	3847	1708617547293965938	CMakeFiles/OpenGL_1.dir/mainwindow.cpp.o	2acdd931ab66d2d2
+581	3853	1708617547302704446	CMakeFiles/OpenGL_1.dir/mainview.cpp.o	5f8a5106a1c0e89
+3853	4082	1708617547534032577	OpenGL_1.app/Contents/MacOS/OpenGL_1	d473c4c3c4ba6b6a

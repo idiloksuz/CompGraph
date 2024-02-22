@@ -113,6 +113,14 @@ void MainView::initializeGL() {
   // Unbind VBO and VAO
   glBindBuffer(GL_ARRAY_BUFFER, 0);
   glBindVertexArray(0);
+
+
+
+  transformationModel.setToIdentity();
+  transformationModel.translate(-2.0f, 0.0f, -6.0f);
+  transformationProjection.setToIdentity();
+  float aspectRatio = static_cast<float>(width()) / height();
+  transformationProjection.perspective(60.0f, aspectRatio, 0.2f, 20.0f);
   // // Enable depth buffer
   // glEnable(GL_DEPTH_TEST);
 
@@ -150,6 +158,10 @@ void MainView::paintGL() {
 
   shaderProgram.bind();
 
+  shaderProgram.setUniformValue("transformationModel", transformationModel);
+
+  shaderProgram.setUniformValue("transformationProjection", transformationProjection);
+
   // Draw here
   // Clear the color buffer
   glClear(GL_COLOR_BUFFER_BIT);
@@ -162,6 +174,7 @@ void MainView::paintGL() {
 
   // Unbind the VAO
   glBindVertexArray(0);
+
   shaderProgram.release();
 }
 
