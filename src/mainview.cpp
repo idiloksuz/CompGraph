@@ -188,6 +188,11 @@ void MainView::resizeGL(int newWidth, int newHeight) {
   // TODO: Update projection to fit the new aspect ratio
   // Q_UNUSED(newWidth)
   // Q_UNUSED(newHeight)
+    float aspectRatio = static_cast<float>(newWidth) / newHeight;
+
+    // Update perspective projection
+    transformationProjection.setToIdentity();
+    transformationProjection.perspective(60.0f, aspectRatio, 0.2f, 20.0f);
   glViewport(0, 0, newWidth, newHeight);
 
 }
