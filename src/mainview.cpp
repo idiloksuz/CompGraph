@@ -1,6 +1,15 @@
 #include "mainview.h"
 
 #include <QDateTime>
+struct Vertex {
+    float x;
+    float y;
+    float z;
+    float red;
+    float green;
+    float blue;
+};
+QOpenGLShaderProgram prog;
 
 /**
  * @brief MainView::MainView Constructs a new main view.
@@ -48,6 +57,43 @@ void MainView::initializeGL() {
   QString glVersion{reinterpret_cast<const char *>(glGetString(GL_VERSION))};
   qDebug() << ":: Using OpenGL" << qPrintable(glVersion);
 
+  Vertex vertices[5];
+
+  // Bottom vertices
+  vertices[0] = {-1.0f, -1.0f, 1.0f, 1.0f, 0.0f, 0.0f}; // Bottom-left corner, red
+  vertices[1] = {1.0f, -1.0f, 1.0f, 0.0f, 1.0f, 0.0f};  // Bottom-right corner, green
+  vertices[2] = {1.0f, 1.0f, 1.0f, 0.0f, 0.0f, 1.0f};   // Top-right corner, blue
+  vertices[3] = {-1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 0.0f};  // Top-left corner, yellow
+
+  // Top vertex
+  vertices[4] = {0.0f, 0.0f, -1.0f, 1.0f, 0.0f, 1.0f};  // Top corner, purple
+  glGenBuffers(1, &vbo);
+  glGenVertexArrays(1, &vao);
+
+
+
+  prog.addShaderFromSourceFile(QOpenGLShader::Vertex, ":/shaders/vertshader.glsl");
+
+  prog.addShaderFromSourceFile(QOpenGLShader::Fragment, ":/shaders/fragshader.glsl");
+
+
+  prog.link();
+  prog.bind();
+
+
+  glBindVertexArray(vao); // Bind the VAO
+  glBindBuffer(GL_ARRAY_BUFFER, vbo); // Bind the VBO
+  glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
+  glEnableVertexAttribArray(0); // Vertex position
+  glEnableVertexAttribArray(1); // Vertex color
+
+  // Specify vertex attribute pointers
+  glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, sizeof(Vertex), reinterpret_cast<void*>(offsetof(Vertex, x)));
+  glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), reinterpret_cast<void*>(offsetof(Vertex, red)));
+
+  // Unbind VBO and VAO
+  glBindBuffer(GL_ARRAY_BUFFER, 0);
+  glBindVertexArray(0);
   // Enable depth buffer
   glEnable(GL_DEPTH_TEST);
 
@@ -87,7 +133,17 @@ void MainView::paintGL() {
   shaderProgram.bind();
 
   // Draw here
+  // Clear the color buffer
+  glClear(GL_COLOR_BUFFER_BIT);
 
+  // Bind the VAO
+  glBindVertexArray(vao);
+
+  // Draw the triangle
+  glDrawArrays(GL_TRIANGLES, 0, 3);
+
+  // Unbind the VAO
+  glBindVertexArray(0);
   shaderProgram.release();
 }
 

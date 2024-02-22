@@ -1,0 +1,24 @@
+# ninja log v5
+1	618	1708613067090868356	OpenGL_1_autogen/timestamp	a1744f6206673fae
+1	618	1708613067090868356	OpenGL_1_autogen/mocs_compilation.cpp	a1744f6206673fae
+1	618	1708613067090868356	/Users/idiloksuz/Desktop/CompGraph/build-src-Replacement_for_Qt_6_6_1_for_macOS-Debug/OpenGL_1_autogen/timestamp	a1744f6206673fae
+1	618	1708613067090868356	/Users/idiloksuz/Desktop/CompGraph/build-src-Replacement_for_Qt_6_6_1_for_macOS-Debug/OpenGL_1_autogen/mocs_compilation.cpp	a1744f6206673fae
+618	734	1708613067249071900	OpenGL_1_autogen/EWIEGA46WW/qrc_resources.cpp	bf1b60fdb06d7dc2
+618	734	1708613067249071900	/Users/idiloksuz/Desktop/CompGraph/build-src-Replacement_for_Qt_6_6_1_for_macOS-Debug/OpenGL_1_autogen/EWIEGA46WW/qrc_resources.cpp	bf1b60fdb06d7dc2
+740	1300	1708613067780928205	CMakeFiles/OpenGL_1.dir/OpenGL_1_autogen/EWIEGA46WW/qrc_resources.cpp.o	e3d7feb7af6c9baf
+739	6291	1708613072782262291	CMakeFiles/OpenGL_1.dir/main.cpp.o	116b411fbab5f62c
+737	7218	1708613073715994200	CMakeFiles/OpenGL_1.dir/model.cpp.o	c83549a9d883eae7
+736	7426	1708613073923493955	CMakeFiles/OpenGL_1.dir/userinput.cpp.o	63c66d68f7013c94
+735	7562	1708613074058121305	CMakeFiles/OpenGL_1.dir/mainview.cpp.o	5f8a5106a1c0e89
+735	7590	1708613074077631643	CMakeFiles/OpenGL_1.dir/OpenGL_1_autogen/mocs_compilation.cpp.o	2e097b5eb6397472
+735	7675	1708613074175677724	CMakeFiles/OpenGL_1.dir/mainwindow.cpp.o	2acdd931ab66d2d2
+7676	8014	1708613074521682179	OpenGL_1.app/Contents/MacOS/OpenGL_1	d473c4c3c4ba6b6a
+21	415	1708613238766339000	OpenGL_1_autogen/timestamp	a1744f6206673fae
+21	415	1708613238766339000	OpenGL_1_autogen/mocs_compilation.cpp	a1744f6206673fae
+21	415	1708613238766339000	/Users/idiloksuz/Desktop/CompGraph/build-src-Replacement_for_Qt_6_6_1_for_macOS-Debug/OpenGL_1_autogen/timestamp	a1744f6206673fae
+21	415	1708613238766339000	/Users/idiloksuz/Desktop/CompGraph/build-src-Replacement_for_Qt_6_6_1_for_macOS-Debug/OpenGL_1_autogen/mocs_compilation.cpp	a1744f6206673fae
+416	3859	1708613242215327550	CMakeFiles/OpenGL_1.dir/userinput.cpp.o	63c66d68f7013c94
+416	3894	1708613242249003061	CMakeFiles/OpenGL_1.dir/mainview.cpp.o	5f8a5106a1c0e89
+415	3929	1708613242286411678	CMakeFiles/OpenGL_1.dir/OpenGL_1_autogen/mocs_compilation.cpp.o	2e097b5eb6397472
+415	4025	1708613242385234079	CMakeFiles/OpenGL_1.dir/mainwindow.cpp.o	2acdd931ab66d2d2
+4025	4369	1708613242736933101	OpenGL_1.app/Contents/MacOS/OpenGL_1	d473c4c3c4ba6b6a

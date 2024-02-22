@@ -47,6 +47,12 @@ class MainView : public QOpenGLWidget, protected QOpenGLFunctions_3_3_Core {
   void onMessageLogged(QOpenGLDebugMessage Message);
 
  private:
+     GLuint vbo;
+
+ private:
+     GLuint vao;
+
+ private:
   QOpenGLDebugLogger debugLogger;
   QTimer timer;  // timer used for animation
 
