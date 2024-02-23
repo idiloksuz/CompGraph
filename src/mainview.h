@@ -10,7 +10,6 @@
 #include <QTimer>
 #include <QVector3D>
 
-#include "model.h"
 
 /**
  * @brief The MainView class is resonsible for the actual content of the main
@@ -51,6 +50,13 @@ class MainView : public QOpenGLWidget, protected QOpenGLFunctions_3_3_Core {
 
  private:
      GLuint vao;
+
+ private:
+     float startScale = 1.0f;
+
+ private:
+     // Other member functions and variables...
+     QVector3D angle = QVector3D(0, 0, 0); // Rotation angles around the x, y, and z axes
 
  private:
   QOpenGLDebugLogger debugLogger;

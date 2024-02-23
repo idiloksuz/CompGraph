@@ -89,77 +89,23 @@ OpenGL_1_autogen/timestamp: \
 	/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/stdio.h \
 	/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/syslimits.h \
 	/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/wait.h \
-	/Users/idiloksuz/Desktop/CG/Tools/CMake/CMake.app/Contents/share/cmake-3.27/Modules/CMakeCXXCompiler.cmake.in \
-	/Users/idiloksuz/Desktop/CG/Tools/CMake/CMake.app/Contents/share/cmake-3.27/Modules/CMakeCXXCompilerABI.cpp \
 	/Users/idiloksuz/Desktop/CG/Tools/CMake/CMake.app/Contents/share/cmake-3.27/Modules/CMakeCXXInformation.cmake \
 	/Users/idiloksuz/Desktop/CG/Tools/CMake/CMake.app/Contents/share/cmake-3.27/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake \
 	/Users/idiloksuz/Desktop/CG/Tools/CMake/CMake.app/Contents/share/cmake-3.27/Modules/CMakeCommonLanguageInclude.cmake \
-	/Users/idiloksuz/Desktop/CG/Tools/CMake/CMake.app/Contents/share/cmake-3.27/Modules/CMakeCompilerIdDetection.cmake \
-	/Users/idiloksuz/Desktop/CG/Tools/CMake/CMake.app/Contents/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake \
-	/Users/idiloksuz/Desktop/CG/Tools/CMake/CMake.app/Contents/share/cmake-3.27/Modules/CMakeDetermineCompileFeatures.cmake \
-	/Users/idiloksuz/Desktop/CG/Tools/CMake/CMake.app/Contents/share/cmake-3.27/Modules/CMakeDetermineCompiler.cmake \
-	/Users/idiloksuz/Desktop/CG/Tools/CMake/CMake.app/Contents/share/cmake-3.27/Modules/CMakeDetermineCompilerABI.cmake \
-	/Users/idiloksuz/Desktop/CG/Tools/CMake/CMake.app/Contents/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake \
-	/Users/idiloksuz/Desktop/CG/Tools/CMake/CMake.app/Contents/share/cmake-3.27/Modules/CMakeDetermineSystem.cmake \
-	/Users/idiloksuz/Desktop/CG/Tools/CMake/CMake.app/Contents/share/cmake-3.27/Modules/CMakeFindBinUtils.cmake \
 	/Users/idiloksuz/Desktop/CG/Tools/CMake/CMake.app/Contents/share/cmake-3.27/Modules/CMakeFindDependencyMacro.cmake \
 	/Users/idiloksuz/Desktop/CG/Tools/CMake/CMake.app/Contents/share/cmake-3.27/Modules/CMakeGenericSystem.cmake \
 	/Users/idiloksuz/Desktop/CG/Tools/CMake/CMake.app/Contents/share/cmake-3.27/Modules/CMakeInitializeConfigs.cmake \
 	/Users/idiloksuz/Desktop/CG/Tools/CMake/CMake.app/Contents/share/cmake-3.27/Modules/CMakeLanguageInformation.cmake \
-	/Users/idiloksuz/Desktop/CG/Tools/CMake/CMake.app/Contents/share/cmake-3.27/Modules/CMakeNinjaFindMake.cmake \
-	/Users/idiloksuz/Desktop/CG/Tools/CMake/CMake.app/Contents/share/cmake-3.27/Modules/CMakeParseImplicitIncludeInfo.cmake \
-	/Users/idiloksuz/Desktop/CG/Tools/CMake/CMake.app/Contents/share/cmake-3.27/Modules/CMakeParseImplicitLinkInfo.cmake \
-	/Users/idiloksuz/Desktop/CG/Tools/CMake/CMake.app/Contents/share/cmake-3.27/Modules/CMakeParseLibraryArchitecture.cmake \
-	/Users/idiloksuz/Desktop/CG/Tools/CMake/CMake.app/Contents/share/cmake-3.27/Modules/CMakeSystem.cmake.in \
 	/Users/idiloksuz/Desktop/CG/Tools/CMake/CMake.app/Contents/share/cmake-3.27/Modules/CMakeSystemSpecificInformation.cmake \
 	/Users/idiloksuz/Desktop/CG/Tools/CMake/CMake.app/Contents/share/cmake-3.27/Modules/CMakeSystemSpecificInitialize.cmake \
-	/Users/idiloksuz/Desktop/CG/Tools/CMake/CMake.app/Contents/share/cmake-3.27/Modules/CMakeTestCXXCompiler.cmake \
-	/Users/idiloksuz/Desktop/CG/Tools/CMake/CMake.app/Contents/share/cmake-3.27/Modules/CMakeTestCompilerCommon.cmake \
 	/Users/idiloksuz/Desktop/CG/Tools/CMake/CMake.app/Contents/share/cmake-3.27/Modules/CheckCXXCompilerFlag.cmake \
 	/Users/idiloksuz/Desktop/CG/Tools/CMake/CMake.app/Contents/share/cmake-3.27/Modules/CheckCXXSourceCompiles.cmake \
 	/Users/idiloksuz/Desktop/CG/Tools/CMake/CMake.app/Contents/share/cmake-3.27/Modules/CheckIncludeFileCXX.cmake \
 	/Users/idiloksuz/Desktop/CG/Tools/CMake/CMake.app/Contents/share/cmake-3.27/Modules/CheckLibraryExists.cmake \
-	/Users/idiloksuz/Desktop/CG/Tools/CMake/CMake.app/Contents/share/cmake-3.27/Modules/Compiler/ADSP-DetermineCompiler.cmake \
-	/Users/idiloksuz/Desktop/CG/Tools/CMake/CMake.app/Contents/share/cmake-3.27/Modules/Compiler/ARMCC-DetermineCompiler.cmake \
-	/Users/idiloksuz/Desktop/CG/Tools/CMake/CMake.app/Contents/share/cmake-3.27/Modules/Compiler/ARMClang-DetermineCompiler.cmake \
 	/Users/idiloksuz/Desktop/CG/Tools/CMake/CMake.app/Contents/share/cmake-3.27/Modules/Compiler/AppleClang-CXX.cmake \
-	/Users/idiloksuz/Desktop/CG/Tools/CMake/CMake.app/Contents/share/cmake-3.27/Modules/Compiler/AppleClang-DetermineCompiler.cmake \
-	/Users/idiloksuz/Desktop/CG/Tools/CMake/CMake.app/Contents/share/cmake-3.27/Modules/Compiler/Borland-DetermineCompiler.cmake \
 	/Users/idiloksuz/Desktop/CG/Tools/CMake/CMake.app/Contents/share/cmake-3.27/Modules/Compiler/CMakeCommonCompilerMacros.cmake \
-	/Users/idiloksuz/Desktop/CG/Tools/CMake/CMake.app/Contents/share/cmake-3.27/Modules/Compiler/Clang-DetermineCompiler.cmake \
-	/Users/idiloksuz/Desktop/CG/Tools/CMake/CMake.app/Contents/share/cmake-3.27/Modules/Compiler/Clang-DetermineCompilerInternal.cmake \
 	/Users/idiloksuz/Desktop/CG/Tools/CMake/CMake.app/Contents/share/cmake-3.27/Modules/Compiler/Clang.cmake \
-	/Users/idiloksuz/Desktop/CG/Tools/CMake/CMake.app/Contents/share/cmake-3.27/Modules/Compiler/Comeau-CXX-DetermineCompiler.cmake \
-	/Users/idiloksuz/Desktop/CG/Tools/CMake/CMake.app/Contents/share/cmake-3.27/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake \
-	/Users/idiloksuz/Desktop/CG/Tools/CMake/CMake.app/Contents/share/cmake-3.27/Modules/Compiler/Cray-DetermineCompiler.cmake \
-	/Users/idiloksuz/Desktop/CG/Tools/CMake/CMake.app/Contents/share/cmake-3.27/Modules/Compiler/Embarcadero-DetermineCompiler.cmake \
-	/Users/idiloksuz/Desktop/CG/Tools/CMake/CMake.app/Contents/share/cmake-3.27/Modules/Compiler/Fujitsu-DetermineCompiler.cmake \
-	/Users/idiloksuz/Desktop/CG/Tools/CMake/CMake.app/Contents/share/cmake-3.27/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake \
-	/Users/idiloksuz/Desktop/CG/Tools/CMake/CMake.app/Contents/share/cmake-3.27/Modules/Compiler/GHS-DetermineCompiler.cmake \
-	/Users/idiloksuz/Desktop/CG/Tools/CMake/CMake.app/Contents/share/cmake-3.27/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake \
 	/Users/idiloksuz/Desktop/CG/Tools/CMake/CMake.app/Contents/share/cmake-3.27/Modules/Compiler/GNU.cmake \
-	/Users/idiloksuz/Desktop/CG/Tools/CMake/CMake.app/Contents/share/cmake-3.27/Modules/Compiler/HP-CXX-DetermineCompiler.cmake \
-	/Users/idiloksuz/Desktop/CG/Tools/CMake/CMake.app/Contents/share/cmake-3.27/Modules/Compiler/IAR-DetermineCompiler.cmake \
-	/Users/idiloksuz/Desktop/CG/Tools/CMake/CMake.app/Contents/share/cmake-3.27/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake \
-	/Users/idiloksuz/Desktop/CG/Tools/CMake/CMake.app/Contents/share/cmake-3.27/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake \
-	/Users/idiloksuz/Desktop/CG/Tools/CMake/CMake.app/Contents/share/cmake-3.27/Modules/Compiler/Intel-DetermineCompiler.cmake \
-	/Users/idiloksuz/Desktop/CG/Tools/CMake/CMake.app/Contents/share/cmake-3.27/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake \
-	/Users/idiloksuz/Desktop/CG/Tools/CMake/CMake.app/Contents/share/cmake-3.27/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake \
-	/Users/idiloksuz/Desktop/CG/Tools/CMake/CMake.app/Contents/share/cmake-3.27/Modules/Compiler/MSVC-DetermineCompiler.cmake \
-	/Users/idiloksuz/Desktop/CG/Tools/CMake/CMake.app/Contents/share/cmake-3.27/Modules/Compiler/NVHPC-DetermineCompiler.cmake \
-	/Users/idiloksuz/Desktop/CG/Tools/CMake/CMake.app/Contents/share/cmake-3.27/Modules/Compiler/NVIDIA-DetermineCompiler.cmake \
-	/Users/idiloksuz/Desktop/CG/Tools/CMake/CMake.app/Contents/share/cmake-3.27/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake \
-	/Users/idiloksuz/Desktop/CG/Tools/CMake/CMake.app/Contents/share/cmake-3.27/Modules/Compiler/PGI-DetermineCompiler.cmake \
-	/Users/idiloksuz/Desktop/CG/Tools/CMake/CMake.app/Contents/share/cmake-3.27/Modules/Compiler/PathScale-DetermineCompiler.cmake \
-	/Users/idiloksuz/Desktop/CG/Tools/CMake/CMake.app/Contents/share/cmake-3.27/Modules/Compiler/SCO-DetermineCompiler.cmake \
-	/Users/idiloksuz/Desktop/CG/Tools/CMake/CMake.app/Contents/share/cmake-3.27/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake \
-	/Users/idiloksuz/Desktop/CG/Tools/CMake/CMake.app/Contents/share/cmake-3.27/Modules/Compiler/TI-DetermineCompiler.cmake \
-	/Users/idiloksuz/Desktop/CG/Tools/CMake/CMake.app/Contents/share/cmake-3.27/Modules/Compiler/Tasking-DetermineCompiler.cmake \
-	/Users/idiloksuz/Desktop/CG/Tools/CMake/CMake.app/Contents/share/cmake-3.27/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake \
-	/Users/idiloksuz/Desktop/CG/Tools/CMake/CMake.app/Contents/share/cmake-3.27/Modules/Compiler/Watcom-DetermineCompiler.cmake \
-	/Users/idiloksuz/Desktop/CG/Tools/CMake/CMake.app/Contents/share/cmake-3.27/Modules/Compiler/XL-CXX-DetermineCompiler.cmake \
-	/Users/idiloksuz/Desktop/CG/Tools/CMake/CMake.app/Contents/share/cmake-3.27/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake \
-	/Users/idiloksuz/Desktop/CG/Tools/CMake/CMake.app/Contents/share/cmake-3.27/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake \
 	/Users/idiloksuz/Desktop/CG/Tools/CMake/CMake.app/Contents/share/cmake-3.27/Modules/FindOpenGL.cmake \
 	/Users/idiloksuz/Desktop/CG/Tools/CMake/CMake.app/Contents/share/cmake-3.27/Modules/FindPackageHandleStandardArgs.cmake \
 	/Users/idiloksuz/Desktop/CG/Tools/CMake/CMake.app/Contents/share/cmake-3.27/Modules/FindPackageMessage.cmake \
@@ -168,12 +114,10 @@ OpenGL_1_autogen/timestamp: \
 	/Users/idiloksuz/Desktop/CG/Tools/CMake/CMake.app/Contents/share/cmake-3.27/Modules/Internal/CheckCompilerFlag.cmake \
 	/Users/idiloksuz/Desktop/CG/Tools/CMake/CMake.app/Contents/share/cmake-3.27/Modules/Internal/CheckFlagCommonConfig.cmake \
 	/Users/idiloksuz/Desktop/CG/Tools/CMake/CMake.app/Contents/share/cmake-3.27/Modules/Internal/CheckSourceCompiles.cmake \
-	/Users/idiloksuz/Desktop/CG/Tools/CMake/CMake.app/Contents/share/cmake-3.27/Modules/Internal/FeatureTesting.cmake \
 	/Users/idiloksuz/Desktop/CG/Tools/CMake/CMake.app/Contents/share/cmake-3.27/Modules/MacroAddFileDependencies.cmake \
 	/Users/idiloksuz/Desktop/CG/Tools/CMake/CMake.app/Contents/share/cmake-3.27/Modules/Platform/Apple-AppleClang-CXX.cmake \
 	/Users/idiloksuz/Desktop/CG/Tools/CMake/CMake.app/Contents/share/cmake-3.27/Modules/Platform/Apple-Clang-CXX.cmake \
 	/Users/idiloksuz/Desktop/CG/Tools/CMake/CMake.app/Contents/share/cmake-3.27/Modules/Platform/Apple-Clang.cmake \
-	/Users/idiloksuz/Desktop/CG/Tools/CMake/CMake.app/Contents/share/cmake-3.27/Modules/Platform/Darwin-Determine-CXX.cmake \
 	/Users/idiloksuz/Desktop/CG/Tools/CMake/CMake.app/Contents/share/cmake-3.27/Modules/Platform/Darwin-Initialize.cmake \
 	/Users/idiloksuz/Desktop/CG/Tools/CMake/CMake.app/Contents/share/cmake-3.27/Modules/Platform/Darwin.cmake \
 	/Users/idiloksuz/Desktop/CG/Tools/CMake/CMake.app/Contents/share/cmake-3.27/Modules/Platform/UnixPaths.cmake \
@@ -197,10 +141,7 @@ OpenGL_1_autogen/timestamp: \
 	/Users/idiloksuz/Qt/6.6.1/macos/lib/QtCore.framework/Versions/A/Headers/QRect \
 	/Users/idiloksuz/Qt/6.6.1/macos/lib/QtCore.framework/Versions/A/Headers/QSize \
 	/Users/idiloksuz/Qt/6.6.1/macos/lib/QtCore.framework/Versions/A/Headers/QSizeF \
-	/Users/idiloksuz/Qt/6.6.1/macos/lib/QtCore.framework/Versions/A/Headers/QString \
-	/Users/idiloksuz/Qt/6.6.1/macos/lib/QtCore.framework/Versions/A/Headers/QStringList \
 	/Users/idiloksuz/Qt/6.6.1/macos/lib/QtCore.framework/Versions/A/Headers/QTimer \
-	/Users/idiloksuz/Qt/6.6.1/macos/lib/QtCore.framework/Versions/A/Headers/QVector \
 	/Users/idiloksuz/Qt/6.6.1/macos/lib/QtCore.framework/Versions/A/Headers/q20functional.h \
 	/Users/idiloksuz/Qt/6.6.1/macos/lib/QtCore.framework/Versions/A/Headers/q20memory.h \
 	/Users/idiloksuz/Qt/6.6.1/macos/lib/QtCore.framework/Versions/A/Headers/q20type_traits.h \
@@ -319,14 +260,12 @@ OpenGL_1_autogen/timestamp: \
 	/Users/idiloksuz/Qt/6.6.1/macos/lib/QtCore.framework/Versions/A/Headers/qutf8stringview.h \
 	/Users/idiloksuz/Qt/6.6.1/macos/lib/QtCore.framework/Versions/A/Headers/qvariant.h \
 	/Users/idiloksuz/Qt/6.6.1/macos/lib/QtCore.framework/Versions/A/Headers/qvarlengtharray.h \
-	/Users/idiloksuz/Qt/6.6.1/macos/lib/QtCore.framework/Versions/A/Headers/qvector.h \
 	/Users/idiloksuz/Qt/6.6.1/macos/lib/QtCore.framework/Versions/A/Headers/qversiontagging.h \
 	/Users/idiloksuz/Qt/6.6.1/macos/lib/QtCore.framework/Versions/A/Headers/qxptype_traits.h \
 	/Users/idiloksuz/Qt/6.6.1/macos/lib/QtGui.framework/Versions/A/Headers/QKeyEvent \
 	/Users/idiloksuz/Qt/6.6.1/macos/lib/QtGui.framework/Versions/A/Headers/QMouseEvent \
 	/Users/idiloksuz/Qt/6.6.1/macos/lib/QtGui.framework/Versions/A/Headers/QSurfaceFormat \
 	/Users/idiloksuz/Qt/6.6.1/macos/lib/QtGui.framework/Versions/A/Headers/QTransform \
-	/Users/idiloksuz/Qt/6.6.1/macos/lib/QtGui.framework/Versions/A/Headers/QVector2D \
 	/Users/idiloksuz/Qt/6.6.1/macos/lib/QtGui.framework/Versions/A/Headers/QVector3D \
 	/Users/idiloksuz/Qt/6.6.1/macos/lib/QtGui.framework/Versions/A/Headers/qaction.h \
 	/Users/idiloksuz/Qt/6.6.1/macos/lib/QtGui.framework/Versions/A/Headers/qbitmap.h \

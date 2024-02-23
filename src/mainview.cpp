@@ -9,6 +9,7 @@ struct Vertex {
     float green;
     float blue;
 };
+
 QOpenGLShaderProgram prog;
 
 /**
@@ -204,9 +205,19 @@ void MainView::resizeGL(int newWidth, int newHeight) {
  * @param rotateZ Number of degrees to rotate around the z axis.
  */
 void MainView::setRotation(int rotateX, int rotateY, int rotateZ) {
-  qDebug() << "Rotation changed to (" << rotateX << "," << rotateY << ","
-           << rotateZ << ")";
-  Q_UNIMPLEMENTED();
+    qDebug() << "Rotation changed to (" << rotateX << "," << rotateY << "," << rotateZ << ")";
+
+    angle.setX(rotateX);
+    angle.setY(rotateY);
+    angle.setZ(rotateZ);
+
+    transformationModel.setToIdentity();
+    transformationModel.translate(-2.0f, 0.0f, -6.0f); // Translate to the origin
+    transformationModel.rotate(angle.x(), QVector3D(1.0f, 0.0f, 0.0f)); // Rotate around x-axis
+    transformationModel.rotate(angle.y(), QVector3D(0.0f, 1.0f, 0.0f)); // Rotate around y-axis
+    transformationModel.rotate(angle.z(), QVector3D(0.0f, 0.0f, 1.0f)); // Rotate around z-axis
+
+    update();
 }
 
 /**
@@ -216,7 +227,14 @@ void MainView::setRotation(int rotateX, int rotateY, int rotateZ) {
  */
 void MainView::setScale(float scale) {
   qDebug() << "Scale changed to " << scale;
-  Q_UNIMPLEMENTED();
+
+  startScale = scale;
+
+  transformationModel.setToIdentity();
+  transformationModel.translate(-2.0f, 0.0f, -6.0f);
+  transformationModel.scale(startScale);
+
+  update();
 }
 
 /**

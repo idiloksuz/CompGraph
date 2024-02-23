@@ -90,17 +90,13 @@
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/stdio.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/syslimits.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/wait.h \
-  /Users/idiloksuz/Desktop/CompGraph/src/model.h \
   /Users/idiloksuz/Qt/6.6.1/macos/lib/QtCore.framework/Versions/A/Headers/QList \
   /Users/idiloksuz/Qt/6.6.1/macos/lib/QtCore.framework/Versions/A/Headers/QObject \
   /Users/idiloksuz/Qt/6.6.1/macos/lib/QtCore.framework/Versions/A/Headers/QPair \
   /Users/idiloksuz/Qt/6.6.1/macos/lib/QtCore.framework/Versions/A/Headers/QRect \
   /Users/idiloksuz/Qt/6.6.1/macos/lib/QtCore.framework/Versions/A/Headers/QSize \
   /Users/idiloksuz/Qt/6.6.1/macos/lib/QtCore.framework/Versions/A/Headers/QSizeF \
-  /Users/idiloksuz/Qt/6.6.1/macos/lib/QtCore.framework/Versions/A/Headers/QString \
-  /Users/idiloksuz/Qt/6.6.1/macos/lib/QtCore.framework/Versions/A/Headers/QStringList \
   /Users/idiloksuz/Qt/6.6.1/macos/lib/QtCore.framework/Versions/A/Headers/QTimer \
-  /Users/idiloksuz/Qt/6.6.1/macos/lib/QtCore.framework/Versions/A/Headers/QVector \
   /Users/idiloksuz/Qt/6.6.1/macos/lib/QtCore.framework/Versions/A/Headers/q20functional.h \
   /Users/idiloksuz/Qt/6.6.1/macos/lib/QtCore.framework/Versions/A/Headers/q20memory.h \
   /Users/idiloksuz/Qt/6.6.1/macos/lib/QtCore.framework/Versions/A/Headers/q20type_traits.h \
@@ -219,14 +215,12 @@
   /Users/idiloksuz/Qt/6.6.1/macos/lib/QtCore.framework/Versions/A/Headers/qutf8stringview.h \
   /Users/idiloksuz/Qt/6.6.1/macos/lib/QtCore.framework/Versions/A/Headers/qvariant.h \
   /Users/idiloksuz/Qt/6.6.1/macos/lib/QtCore.framework/Versions/A/Headers/qvarlengtharray.h \
-  /Users/idiloksuz/Qt/6.6.1/macos/lib/QtCore.framework/Versions/A/Headers/qvector.h \
   /Users/idiloksuz/Qt/6.6.1/macos/lib/QtCore.framework/Versions/A/Headers/qversiontagging.h \
   /Users/idiloksuz/Qt/6.6.1/macos/lib/QtCore.framework/Versions/A/Headers/qxptype_traits.h \
   /Users/idiloksuz/Qt/6.6.1/macos/lib/QtGui.framework/Versions/A/Headers/QKeyEvent \
   /Users/idiloksuz/Qt/6.6.1/macos/lib/QtGui.framework/Versions/A/Headers/QMouseEvent \
   /Users/idiloksuz/Qt/6.6.1/macos/lib/QtGui.framework/Versions/A/Headers/QSurfaceFormat \
   /Users/idiloksuz/Qt/6.6.1/macos/lib/QtGui.framework/Versions/A/Headers/QTransform \
-  /Users/idiloksuz/Qt/6.6.1/macos/lib/QtGui.framework/Versions/A/Headers/QVector2D \
   /Users/idiloksuz/Qt/6.6.1/macos/lib/QtGui.framework/Versions/A/Headers/QVector3D \
   /Users/idiloksuz/Qt/6.6.1/macos/lib/QtGui.framework/Versions/A/Headers/qaction.h \
   /Users/idiloksuz/Qt/6.6.1/macos/lib/QtGui.framework/Versions/A/Headers/qbitmap.h \
