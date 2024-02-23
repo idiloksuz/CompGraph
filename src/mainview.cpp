@@ -210,6 +210,7 @@ void MainView::setRotation(int rotateX, int rotateY, int rotateZ) {
     angle.setX(rotateX);
     angle.setY(rotateY);
     angle.setZ(rotateZ);
+    //moew
 
     transformationModel.setToIdentity();
     transformationModel.translate(-2.0f, 0.0f, -6.0f); // Translate to the origin
