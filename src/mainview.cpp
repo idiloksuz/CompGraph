@@ -1,16 +1,12 @@
 #include "mainview.h"
+#include "model.h"
 
 #include <QDateTime>
-struct Vertex {
-    float x;
-    float y;
-    float z;
-    float red;
-    float green;
-    float blue;
-};
 
-QOpenGLShaderProgram prog;
+
+
+ float startScale = 1.0f;
+//QOpenGLShaderProgram shaderProgram;
 
 /**
  * @brief MainView::MainView Constructs a new main view.
@@ -56,49 +52,52 @@ void MainView::initializeGL() {
     qDebug() << ":: Logging initialized";
     debugLogger.startLogging(QOpenGLDebugLogger::SynchronousLogging);
   }
+  // Enable depth buffer
+  glEnable(GL_DEPTH_TEST);
 
+  // Enable backface culling
+  glEnable(GL_CULL_FACE);
+
+
+  // Default is GL_LESS
+  glDepthFunc(GL_LEQUAL);
+  // glBindBuffer(GL_ARRAY_BUFFER, 0);
+  // glBindVertexArray(0);
+
+  // Set the color to be used by glClear. This is, effectively, the background
+  // color.
+  glClearColor(0.37f, 0.42f, 0.45f, 0.0f);
+  createShaderProgram();
   QString glVersion{reinterpret_cast<const char *>(glGetString(GL_VERSION))};
   qDebug() << ":: Using OpenGL" << qPrintable(glVersion);
   Vertex vertices[18]; // 6 vertices for the pyramid
-
-  // Define vertices of the pyramid
-  vertices[0] = {-1.0f, -1.0f, 1.0f, 0.0f, 0.0f, 1.0f}; // BLUE
-  vertices[1] = {1.0f, -1.0f, 1.0f, 1.0f, 1.0f, 0.0f};  // YELLOW
-  vertices[2] = {0.0f, 0.0f, -1.0f, 1.0f, 0.0f, 1.0f};  // PURPLE
-
-  vertices[3] = {1.0f, -1.0f, 1.0f, 1.0f, 1.0f, 0.0f};  // YELLOW
-  vertices[4] = {1.0f, 1.0f, 1.0f, 0.0f, 1.0f, 0.0f};   // GREEN
-  vertices[5] = {0.0f, 0.0f, -1.0f, 1.0f, 0.0f, 1.0f};  // PURPLE
-
-  vertices[6] = {1.0f, 1.0f, 1.0f, 0.0f, 1.0f, 0.0f};   // GREEN
-  vertices[7] = {-1.0f, 1.0f, 1.0f, 1.0f, 0.0f, 0.0f};  // RED
-  vertices[8] = {0.0f, 0.0f, -1.0f, 1.0f, 0.0f, 1.0f};  // PURPLE
-
-  vertices[9] = {-1.0f, 1.0f, 1.0f, 1.0f, 0.0f, 0.0f};  // RED
   vertices[10] = {-1.0f, -1.0f, 1.0f, 0.0f, 0.0f, 1.0f}; // BLUE
   vertices[11] = {0.0f, 0.0f, -1.0f, 1.0f, 0.0f, 1.0f};  // PURPLE
+  vertices[9] = {1.0f, -1.0f, 1.0f, 1.0f, 1.0f, 0.0f};  // YELLOW
 
-  vertices[12] = {-1.0f, -1.0f, 1.0f, 0.0f, 0.0f, 1.0f}; // BLUE
-  vertices[13] = {1.0f, -1.0f, 1.0f, 1.0f, 1.0f, 0.0f};  // YELLOW
-  vertices[14] = {-1.0f, 1.0f, 1.0f, 1.0f, 0.0f, 0.0f};  // RED
+  vertices[6] = {1.0f, 1.0f, 1.0f, 0.0f, 1.0f, 0.0f};   // GREEN
+  vertices[7] = {1.0f, -1.0f, 1.0f, 1.0f, 1.0f, 0.0f};  // YELLOW
+  vertices[8] = {0.0f, 0.0f, -1.0f, 1.0f, 0.0f, 1.0f};  // PURPLE
 
-  vertices[15] = {1.0f, -1.0f, 1.0f, 1.0f, 1.0f, 0.0f};  // YELLOW
-  vertices[16] = {1.0f, 1.0f, 1.0f, 0.0f, 1.0f, 0.0f};   // GREEN
-  vertices[17] = {-1.0f, 1.0f, 1.0f, 1.0f, 0.0f, 0.0f};  // RED
+  vertices[0] = {0.0f, 0.0f, -1.0f, 1.0f, 0.0f, 1.0f};  // PURPLE
+  vertices[1] = {-1.0f, 1.0f, 1.0f, 1.0f, 0.0f, 0.0f};  // RED
+  vertices[2] = {1.0f, 1.0f, 1.0f, 0.0f, 1.0f, 0.0f};   // GREEN
+
+
+  vertices[3] = {-1.0f, 1.0f, 1.0f, 1.0f, 0.0f, 0.0f};  // RED
+  vertices[4] = {0.0f, 0.0f, -1.0f, 1.0f, 0.0f, 1.0f};  // PURPLE
+  vertices[5] = {-1.0f, -1.0f, 1.0f, 0.0f, 0.0f, 1.0f}; // BLUE
+
+  vertices[15] = {-1.0f, 1.0f, 1.0f, 1.0f, 0.0f, 0.0f};  // RED
+  vertices[16] = {-1.0f, -1.0f, 1.0f, 0.0f, 0.0f, 1.0f}; // BLUE
+  vertices[17] = {1.0f, -1.0f, 1.0f, 1.0f, 1.0f, 0.0f};  // YELLOW
+
+  vertices[12] = {1.0f, 1.0f, 1.0f, 0.0f, 1.0f, 0.0f};   // GREEN
+  vertices[13] = {-1.0f, 1.0f, 1.0f, 1.0f, 0.0f, 0.0f};  // RED
+  vertices[14] = {1.0f, -1.0f, 1.0f, 1.0f, 1.0f, 0.0f};  // YELLOW
 
   glGenBuffers(1, &vbo);
   glGenVertexArrays(1, &vao);
-
-
-
-  prog.addShaderFromSourceFile(QOpenGLShader::Vertex, ":/shaders/vertshader.glsl");
-
-  prog.addShaderFromSourceFile(QOpenGLShader::Fragment, ":/shaders/fragshader.glsl");
-
-
-  prog.link();
-  prog.bind();
-
 
   glBindVertexArray(vao); // Bind the VAO
   glBindBuffer(GL_ARRAY_BUFFER, vbo); // Bind the VBO
@@ -110,31 +109,56 @@ void MainView::initializeGL() {
   glEnableVertexAttribArray(0); // Vertex position
   glEnableVertexAttribArray(1); // Vertex color
 
-
-  // Unbind VBO and VAO
-  glBindBuffer(GL_ARRAY_BUFFER, 0);
-  glBindVertexArray(0);
-
-
-
   transformationModel.setToIdentity();
   transformationModel.translate(-2.0f, 0.0f, -6.0f);
+
+  //transformationProjection.setToIdentity();
+
+
+
+  Model knotModel(":/models/knot.obj");
+  QVector<QVector3D> meshCoords = knotModel.getMeshCoords();
+  Vertex verticesModel[meshCoords.size()];
+
+  // Construct an array of Vertex objects
+  for (int i =0 ; i< meshCoords.size(); i++) {
+
+      verticesModel[i].x = meshCoords[i].x();
+      verticesModel[i].y = meshCoords[i].y();
+      verticesModel[i].z = meshCoords[i].z();
+
+      verticesModel[i].red = abs(meshCoords[i].x());
+      verticesModel[i].green = abs(meshCoords[i].y());
+      verticesModel[i].blue = abs(meshCoords[i].z());
+
+  }
+
+  glGenBuffers(1, &meshVbo);
+
+  glGenVertexArrays(1, &meshVao);
+
+  // Bind VAO
+  glBindVertexArray(meshVao);
+
+  // Bind VBO and fill it with vertex data
+  glBindBuffer(GL_ARRAY_BUFFER, meshVbo);
+  glBufferData(GL_ARRAY_BUFFER, sizeof(verticesModel), verticesModel, GL_STATIC_DRAW);
+  glEnableVertexAttribArray(0); // Vertex position
+  glEnableVertexAttribArray(1); // Vertex color
+  glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), reinterpret_cast<void*>(offsetof(Vertex, x)));
+  glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), reinterpret_cast<void*>(offsetof(Vertex, red)));
+
+
+  transformationModelMatrix.setToIdentity();
+  transformationModelMatrix.translate(2.0f, 0.0f, -6.0f);
   transformationProjection.setToIdentity();
+
   float aspectRatio = static_cast<float>(width()) / height();
   transformationProjection.perspective(60.0f, aspectRatio, 0.2f, 20.0f);
-  // // Enable depth buffer
-  // glEnable(GL_DEPTH_TEST);
+  nrOfTriangles = sizeof(verticesModel);
 
-  // // Enable backface culling
-  // glEnable(GL_CULL_FACE);
 
-  // // Default is GL_LESS
-  // glDepthFunc(GL_LEQUAL);
 
-  // Set the color to be used by glClear. This is, effectively, the background
-  // color.
-glClearColor(0.37f, 0.42f, 0.45f, 0.0f);
-  createShaderProgram();
 }
 
 /**
@@ -154,29 +178,30 @@ void MainView::createShaderProgram() {
  *
  */
 void MainView::paintGL() {
-  // Clear the screen before rendering
-  glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-  shaderProgram.bind();
+    shaderProgram.bind();
 
-  shaderProgram.setUniformValue("transformationModel", transformationModel);
+    glBindVertexArray(vao);
 
-  shaderProgram.setUniformValue("transformationProjection", transformationProjection);
+    int temp = shaderProgram.uniformLocation("transformationModel");
+    shaderProgram.setUniformValue(temp, transformationModel);
+    int temp2 = shaderProgram.uniformLocation("transformationProjection");
+    shaderProgram.setUniformValue(temp2, transformationProjection);
 
-  // Draw here
-  // Clear the color buffer
-  glClear(GL_COLOR_BUFFER_BIT);
+    // Draw the pyramid
+    glDrawArrays(GL_TRIANGLES, 0, 18);
 
-  // Bind the VAO
-  glBindVertexArray(vao);
 
-  // Draw the triangle
-  glDrawArrays(GL_TRIANGLES, 0, 18);
 
-  // Unbind the VAO
-  glBindVertexArray(0);
+    glBindVertexArray(meshVao);
 
-  shaderProgram.release();
+    int temp3 = shaderProgram.uniformLocation("transformationModelMatrix");
+    shaderProgram.setUniformValue(temp3, transformationModelMatrix);
+
+    glDrawArrays(GL_TRIANGLES, 0, nrOfTriangles);
+
+    shaderProgram.release();
 }
 
 /**
@@ -194,7 +219,6 @@ void MainView::resizeGL(int newWidth, int newHeight) {
     // Update perspective projection
     transformationProjection.setToIdentity();
     transformationProjection.perspective(60.0f, aspectRatio, 0.2f, 20.0f);
-  glViewport(0, 0, newWidth, newHeight);
 
 }
 
@@ -207,18 +231,29 @@ void MainView::resizeGL(int newWidth, int newHeight) {
 void MainView::setRotation(int rotateX, int rotateY, int rotateZ) {
     qDebug() << "Rotation changed to (" << rotateX << "," << rotateY << "," << rotateZ << ")";
 
-    angle.setX(rotateX);
-    angle.setY(rotateY);
-    angle.setZ(rotateZ);
-    //moew
+    angleX = rotateX;
+    angleY = rotateY;
+    angleZ = rotateZ;
+
 
     transformationModel.setToIdentity();
-    transformationModel.translate(-2.0f, 0.0f, -6.0f); // Translate to the origin
-    transformationModel.rotate(angle.x(), QVector3D(1.0f, 0.0f, 0.0f)); // Rotate around x-axis
-    transformationModel.rotate(angle.y(), QVector3D(0.0f, 1.0f, 0.0f)); // Rotate around y-axis
-    transformationModel.rotate(angle.z(), QVector3D(0.0f, 0.0f, 1.0f)); // Rotate around z-axis
+    transformationModel.translate(-2.0f, 0.0f, -6.0f);
+    transformationModel.rotate(angleX, QVector3D(1.0f, 0.0f, 0.0f)); // Rotate around x-axis
+    transformationModel.rotate(angleY, QVector3D(0.0f, 1.0f, 0.0f)); // Rotate around y-axis
+    transformationModel.rotate(angleZ, QVector3D(0.0f, 0.0f, 1.0f)); // Rotate around z-axis
+    transformationModel.scale(startScale);
+
+    transformationModelMatrix.setToIdentity();
+    transformationModelMatrix.translate(2.0f, 0.0f, -6.0f);
+
+    transformationModelMatrix.rotate(angleX, QVector3D(1.0f, 0.0f, 0.0f)); // Rotate around x-axis
+    transformationModelMatrix.rotate(angleY, QVector3D(0.0f, 1.0f, 0.0f)); // Rotate around y-axis
+    transformationModelMatrix.rotate(angleZ, QVector3D(0.0f, 0.0f, 1.0f)); // Rotate around z-axis
+    transformationModelMatrix.scale(startScale);
+
 
     update();
+
 }
 
 /**
@@ -227,15 +262,26 @@ void MainView::setRotation(int rotateX, int rotateY, int rotateZ) {
  * mesh to its original size.
  */
 void MainView::setScale(float scale) {
-  qDebug() << "Scale changed to " << scale;
+    qDebug() << "Scale changed to " << scale;
+    startScale = scale;
 
-  startScale = scale;
+    transformationModel.setToIdentity();
+    transformationModel.translate(-2.0f, 0.0f, -6.0f);
+    transformationModel.rotate(angleX, QVector3D(1.0f, 0.0f, 0.0f)); // Rotate around x-axis
+    transformationModel.rotate(angleY, QVector3D(0.0f, 1.0f, 0.0f)); // Rotate around y-axis
+    transformationModel.rotate(angleZ, QVector3D(0.0f, 0.0f, 1.0f)); // Rotate around z-axis
+    transformationModel.scale(startScale);
 
-  transformationModel.setToIdentity();
-  transformationModel.translate(-2.0f, 0.0f, -6.0f);
-  transformationModel.scale(startScale);
 
-  update();
+    transformationModelMatrix.setToIdentity();
+    transformationModelMatrix.translate(2.0f, 0.0f, -6.0f);
+    transformationModelMatrix.rotate(angleX, QVector3D(1.0f, 0.0f, 0.0f)); // Rotate around x-axis
+    transformationModelMatrix.rotate(angleY, QVector3D(0.0f, 1.0f, 0.0f)); // Rotate around y-axis
+    transformationModelMatrix.rotate(angleZ, QVector3D(0.0f, 0.0f, 1.0f)); // Rotate around z-axis
+    transformationModelMatrix.scale(startScale);
+
+    update();
+
 }
 
 /**

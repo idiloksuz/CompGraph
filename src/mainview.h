@@ -50,25 +50,38 @@ class MainView : public QOpenGLWidget, protected QOpenGLFunctions_3_3_Core {
 
  private:
      GLuint vao;
+     GLuint meshVao, meshVbo;
+
+
+ // private:
+
 
  private:
-     float startScale = 1.0f;
+     QVector3D angle = QVector3D(0, 0, 0);
+     int angleX= 0;
+     int angleY= 0;
+     int angleZ= 0;
+     struct Vertex {
+         float x;
+         float y;
+         float z;
+         float red;
+         float green;
+         float blue;
+     };
 
- private:
-     // Other member functions and variables...
-     QVector3D angle = QVector3D(0, 0, 0); // Rotation angles around the x, y, and z axes
+
+
+
 
  private:
   QOpenGLDebugLogger debugLogger;
   QTimer timer;  // timer used for animation
-
   QOpenGLShaderProgram shaderProgram;
-  protected:
-  // Other protected members...
-
   QMatrix4x4 transformationModel;
   QMatrix4x4 transformationProjection;
-
+  QMatrix4x4 transformationModelMatrix;
+  int nrOfTriangles;
 
   void createShaderProgram();
 };

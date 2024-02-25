@@ -182,7 +182,7 @@ build OpenGL_1_autogen/EWIEGA46WW/qrc_resources.cpp | ${cmake_ninja_workdir}Open
 #############################################
 # Phony custom command for CMakeFiles/OpenGL_1_autogen_timestamp_deps
 
-build CMakeFiles/OpenGL_1_autogen_timestamp_deps | ${cmake_ninja_workdir}CMakeFiles/OpenGL_1_autogen_timestamp_deps: phony /Users/idiloksuz/Qt/6.6.1/macos/lib/QtOpenGL.framework/Versions/A/QtOpenGL /Users/idiloksuz/Qt/6.6.1/macos/./libexec/uic /Users/idiloksuz/Qt/6.6.1/macos/lib/QtCore.framework/Versions/A/QtCore /Users/idiloksuz/Qt/6.6.1/macos/lib/QtOpenGLWidgets.framework/Versions/A/QtOpenGLWidgets /Users/idiloksuz/Qt/6.6.1/macos/lib/QtWidgets.framework/Versions/A/QtWidgets /Users/idiloksuz/Qt/6.6.1/macos/./libexec/moc
+build CMakeFiles/OpenGL_1_autogen_timestamp_deps | ${cmake_ninja_workdir}CMakeFiles/OpenGL_1_autogen_timestamp_deps: phony /Users/idiloksuz/Qt/6.6.1/macos/lib/QtOpenGLWidgets.framework/Versions/A/QtOpenGLWidgets /Users/idiloksuz/Qt/6.6.1/macos/./libexec/moc /Users/idiloksuz/Qt/6.6.1/macos/lib/QtWidgets.framework/Versions/A/QtWidgets /Users/idiloksuz/Qt/6.6.1/macos/./libexec/uic /Users/idiloksuz/Qt/6.6.1/macos/lib/QtOpenGL.framework/Versions/A/QtOpenGL /Users/idiloksuz/Qt/6.6.1/macos/lib/QtCore.framework/Versions/A/QtCore
 
 
 #############################################
