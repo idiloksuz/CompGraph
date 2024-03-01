@@ -1,0 +1,5 @@
+/Users/idiloksuz/Desktop/CompGraph/build-src-Replacement_for_Qt_6_6_1_for_macOS-Debug/CMakeFiles/OpenGL_1.dir
+/Users/idiloksuz/Desktop/CompGraph/build-src-Replacement_for_Qt_6_6_1_for_macOS-Debug/CMakeFiles/edit_cache.dir
+/Users/idiloksuz/Desktop/CompGraph/build-src-Replacement_for_Qt_6_6_1_for_macOS-Debug/CMakeFiles/rebuild_cache.dir
+/Users/idiloksuz/Desktop/CompGraph/build-src-Replacement_for_Qt_6_6_1_for_macOS-Debug/CMakeFiles/OpenGL_1_autogen_timestamp_deps.dir
+/Users/idiloksuz/Desktop/CompGraph/build-src-Replacement_for_Qt_6_6_1_for_macOS-Debug/CMakeFiles/OpenGL_1_autogen.dir
